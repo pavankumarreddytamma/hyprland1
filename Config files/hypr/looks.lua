@@ -30,7 +30,7 @@ hl.config({
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
-        inactive_opacity = 0.8,
+        inactive_opacity = 0.9,
 
         shadow = {
             enabled      = false,
@@ -60,29 +60,29 @@ hl.config({
 })
 
 
-hl.curve("animation", {type = "bezier",points = {{0.35, 0.52},{0.35, 0.98},}})
-hl.curve("animation1", {type = "bezier",points = {{0.26, 0.49},{0.52, 0.77},}})
+hl.curve("animation", {type = "bezier",points = {{0, 0},{0.3, 1},}})
+hl.curve("animation1", {type = "bezier",points = {{0, 0},{0.5, 1.25},}})
 hl.curve("fancy", {type = "bezier", points = {{1, 1} , {0, -0.01},}})
 
 
 
-hl.animation({ leaf = "global",        enabled = true,  speed = 3,bezier = "animation" })
-hl.animation({ leaf = "border",        enabled = true,  speed = 3, bezier = "animation" })
-hl.animation({ leaf = "windows",       enabled = true,  speed = 3, bezier = "animation"})
-hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 3, bezier = "animation", style = "slide"})
-hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 3, bezier = "animation", style = "slide"})
-hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 3, bezier = "animation" })
-hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 3, bezier = "animation" })
-hl.animation({ leaf = "fade",          enabled = true,  speed = 3, bezier = "animation" })
-hl.animation({ leaf = "layers",        enabled = true,  speed = 3, bezier = "animation" })
-hl.animation({ leaf = "layersIn",      enabled = true,  speed = 3, bezier = "animation", style = "slide" })
-hl.animation({ leaf = "layersOut",     enabled = true,  speed = 3, bezier = "animation", style = "slide" })
-hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 3, bezier = "animation" })
-hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 3, bezier = "animation" })
-hl.animation({ leaf = "workspaces",    enabled = true,  speed = 3, bezier = "animation", style = "slide" })
-hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 3, bezier = "animation", style = "slide" })
-hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 3, bezier = "animation", style = "slide" })
-hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 3, bezier = "animation" })
+hl.animation({ leaf = "global",        enabled = true,  speed = 5, bezier = "animation" })
+hl.animation({ leaf = "border",        enabled = true,  speed = 5, bezier = "animation" })
+hl.animation({ leaf = "windows",       enabled = true,  speed = 5, bezier = "animation"})
+hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 5, bezier = "animation", style = "slide"})
+hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 5, bezier = "animation", style = "slide"})
+hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 5, bezier = "animation" })
+hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 5, bezier = "animation" })
+hl.animation({ leaf = "fade",          enabled = true,  speed = 5, bezier = "animation" })
+hl.animation({ leaf = "layers",        enabled = true,  speed = 5, bezier = "animation" })
+hl.animation({ leaf = "layersIn",      enabled = true,  speed = 5, bezier = "animation", style = "slide" })
+hl.animation({ leaf = "layersOut",     enabled = true,  speed = 5, bezier = "animation", style = "slide" })
+hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 5, bezier = "animation" })
+hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 5, bezier = "animation" })
+hl.animation({ leaf = "workspaces",    enabled = true,  speed = 5, bezier = "animation", style = "slide" })
+hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 5, bezier = "animation", style = "slide" })
+hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 5, bezier = "animation", style = "slide" })
+hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 5, bezier = "animation" })
 
 hl.config({
     dwindle = {

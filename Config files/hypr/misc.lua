@@ -13,6 +13,10 @@ hl.config({
         overlay = false
     },
     render = {
-        new_render_scheduling = true,
+        new_render_scheduling = false,
+        direct_scanout = 2
+    },
+    cursor = {
+        no_hardware_cursors = true,
     }
 })

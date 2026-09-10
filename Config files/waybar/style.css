@@ -51,6 +51,10 @@ window#waybar {
     color: red;
 }
 
+#battery.warning {
+    color: rgb(126, 205, 78);
+}
+
 #network {
     color: rgb(225, 215, 215);
     margin-left: 8px;
@@ -71,7 +75,7 @@ window#waybar {
 }
 
 #info {
-    background: rgb(69, 56, 56);
+    background: rgb(69, 58, 56);
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 8px;

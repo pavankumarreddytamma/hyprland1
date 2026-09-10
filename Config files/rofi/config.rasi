@@ -9,7 +9,7 @@ configuration {
 @theme "/dev/null"
 
 * {
-    bg:          #011919; /* Deep blue glass */
+    bg:          #042b2e; /* Deep blue glass */
     bg-sel:      #1d3557;   /* Selection blue */
     fg:          #e6f1ff;   /* White text */
     accent:      #ffffff;   /* Teal accent */
@@ -26,6 +26,7 @@ window {
     border-color:     #ff0c0c00;
     background-color: @bg;
     padding: 4px;
+    border-radius:    4px;
 }
 
 mainbox {
