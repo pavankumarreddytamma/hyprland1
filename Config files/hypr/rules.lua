@@ -48,7 +48,7 @@ hl.window_rule({
 
 hl.layer_rule({ match = { namespace = "rofi" }, blur = true })
 hl.layer_rule({ match = { namespace = "rofi" }, dim_around = true })
-hl.layer_rule({match = { namespace = "rofi" },animation = "popin"})
+hl.layer_rule({match = { namespace = "rofi" },animation = "slide"})
 
 --Gamemode
 hl.bind("SUPER + G", function ()
@@ -76,12 +76,5 @@ hl.bind("SUPER + G", function ()
             rounding = 0,
         }
     })
-
-    hl.window_rule({
-    match = { class = "nemo" },
-    float = true,
-})
-
-
 
 end)

@@ -50,7 +50,7 @@
             "󰁹"
         ],
         "format-charging": "󰂄",
-        "tooltip-format": "{capacity}% | Time remaining: {time}"
+        "tooltip-format": "{capacity}%"
     },
 
     "clock": {
