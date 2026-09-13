@@ -21,7 +21,7 @@ hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/n
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind("SUPER + SHIFT + Left", hl.dsp.window.move({ direction = "left"}))
@@ -31,6 +31,9 @@ hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("/home/pavan/Scripts/awww.sh"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("HYPRSHOT_DIR=/home/pavan/screenshots hyprshot --freeze -zm region"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("brave"))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("pavucontrol"))
+hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("blueman-manager"))
+hl.bind(mainMod .. " + p", hl.dsp.exec_cmd("nmgui"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
