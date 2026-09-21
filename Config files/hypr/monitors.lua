@@ -17,7 +17,7 @@ hl.monitor({
     mode     = "preferred",
     position = "auto",
     scale    = "1",
-    disabled = true
+    disabled = false
 })
 
 hl.monitor({

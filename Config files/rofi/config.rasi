@@ -19,7 +19,7 @@ window {
 
 mainbox {
     children:         [ inputbar, listview ];
-    background-color: rgb(57, 23, 47);
+    background-color: rgb(57, 23, 47, 0.6);
     border-color: transparent;
     border-radius: 12px;
 }
@@ -27,7 +27,7 @@ mainbox {
 inputbar {
     margin:           16px 16px 16px 16px;
     padding:          12px 12px 12px 12px;
-    background-color: rgb(77, 31, 63);
+    background-color: rgba(77, 31, 63, 0.4);
     border-radius:    12px;
     children:         [ prompt,entry ];
 }
@@ -56,7 +56,7 @@ element {
 }
 
 element selected {
-    background-color: rgb(94, 38, 77);
+    background-color: rgba(94, 38, 77, 0.6);
     text-color:       #e1d7d7;
 }
 
