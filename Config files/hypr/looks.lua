@@ -34,21 +34,22 @@ hl.config({
 
         shadow = {
             enabled      = false,
-            range        = 4,
-            render_power = 3,
-            color        = 0xee1a1a1a,
+            range        = 10,
+            render_power = 2,
+            color        = "rgb(202121)",
+	    color_inactive = "rgb(db74bd)"
         },
 
         blur = {
             enabled   = true,
-            size      = 8,
-            passes    = 3,
+            size      = 5,
+            passes    = 2,
             new_optimizations = true,
         },
 
         motion_blur = {
             enabled = false,
-            samples = 12,
+            samples = 20,
         },
     },
 

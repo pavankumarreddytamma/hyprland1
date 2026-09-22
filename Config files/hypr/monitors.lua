@@ -3,19 +3,10 @@
 ---- MONITORS ----
 ------------------
 
-
-
-hl.monitor({
-  output = "",
-  mode = "preferred",
-  position = "auto",
-  scale = 1,
-})
-
 hl.monitor({
     output   = "eDP-1",
     mode     = "preferred",
-    position = "auto",
+    position = "0x0",
     scale    = "1",
     disabled = false
 })
@@ -23,6 +14,6 @@ hl.monitor({
 hl.monitor({
     output   = "HDMI-A-2",
     mode     = "1920x1080@144",
-    position = "auto",
+    position = "1920x0",
     scale    = "1",
 })

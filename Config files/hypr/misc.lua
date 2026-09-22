@@ -13,10 +13,14 @@ hl.config({
         overlay = false
     },
     render = {
-        new_render_scheduling = false,
-        direct_scanout = 2
+        direct_scanout = 2,
+        --async_commit = true
     },
     cursor = {
-        no_hardware_cursors = true,
+        no_hardware_cursors = 0,
+	default_monitor = "HDMI-A-22"
+    },
+    opengl = {
+        nvidia_anti_flicker = true,
     }
 })
