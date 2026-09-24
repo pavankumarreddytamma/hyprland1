@@ -14,25 +14,26 @@ window#waybar {
 
 #workspaces button {
     background: transparent;
-    color: rgb(143, 140, 140);
+    color: rgb(255, 255, 255);
     border-radius: 8px;
     padding-bottom: 4px;
     padding-top: 4px;
+    margin-right: 4px;
 }
 
 #workspaces button.urgent {
     background: red;
-    color: rgb(225, 215, 215);
+    color: rgb(255, 255, 255);
 }
 
 #workspaces button.active {
-    background: #39172f;
-    color: rgb(225, 215, 215);
+    background: rgba(0, 0, 0, 0.9);
+    color: rgb(255, 255, 255);
 }
 
 #clock {
-    background: #39172f;
-    color: rgb(225, 215, 215);
+    background: rgba(0, 0, 0, 0.9);
+    color: rgb(255, 255, 255);
     margin-left: 8px;
     margin-right: 8px;
     padding-left: 12px;
@@ -41,7 +42,7 @@ window#waybar {
 }
 
 #battery {
-    color: rgb(225, 215, 215);
+    color: rgb(255, 255, 255);
     margin-left: 8px;
     margin-right: 8px;
 }
@@ -55,26 +56,26 @@ window#waybar {
 }
 
 #network {
-    color: rgb(225, 215, 215);
+    color: rgb(255, 255, 255);
     margin-left: 8px;
     margin-right: 8px;
 }
 
 
 #pulseaudio {
-    color: rgb(225, 215, 215);
+    color: rgb(255, 255, 255);
     margin-left: 8px;
     margin-right: 8px;
 }
 
 #backlight {
-    color: rgb(225, 215, 215);
+    color: rgb(255, 255, 255);
     margin-left: 8px;
     margin-right: 8px;
 }
 
 #info {
-    background: #39172f;
+    background: rgba(0, 0, 0, 0.9);
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 8px;
@@ -82,27 +83,27 @@ window#waybar {
 }
 
 #utils {
-    background: #39172f;
+    background: rgba(0, 0, 0, 0.9);
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 8px;
 }
 
 #cpu {
-    color: rgb(225, 215, 215);
+    color: rgb(255, 255, 255);
     margin-left: 8px;
     margin-right: 8px;  
 }
 
 #temperature {
-    color: rgb(225, 215, 215);
+    color: rgb(255, 255, 255);
     margin-left: 8px;
     margin-right: 8px;
 }
 
 #memory {
-    color: rgb(225, 215, 215);
-    background: #39172f;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.9);
     margin-left: 8px;
     padding-left: 8px;
     padding-right: 8px;
@@ -110,7 +111,7 @@ window#waybar {
 }
 
 #cpubar {
-    background: #39172f;
+    background: rgba(0, 0, 0, 0.9);
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 8px;

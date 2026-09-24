@@ -19,7 +19,7 @@ window {
 
 mainbox {
     children:         [ inputbar, listview ];
-    background-color: rgb(57, 23, 47, 0.6);
+    background-color: rgb(0, 0, 0, 0.9);
     border-color: transparent;
     border-radius: 12px;
 }
@@ -27,20 +27,20 @@ mainbox {
 inputbar {
     margin:           16px 16px 16px 16px;
     padding:          12px 12px 12px 12px;
-    background-color: rgba(77, 31, 63, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius:    12px;
     children:         [ prompt,entry ];
 }
 
 prompt {
-    text-color:       rgba(225, 215, 215, 0.6);
+    text-color:       rgba(255, 255, 255, 0.6);
     padding:          0px 12px 0px 5px;
 }
 
 entry {
-    text-color:       rgba(225, 215, 215);
+    text-color:       rgba(255, 255, 255,1);
     placeholder:      "Search Apps...";
-    placeholder-color: rgba(225, 215, 215, 0.6);
+    placeholder-color: rgba(255, 255, 255, 0.6);
 }
 
 listview {
@@ -56,8 +56,7 @@ element {
 }
 
 element selected {
-    background-color: rgba(94, 38, 77, 0.6);
-    text-color:       #e1d7d7;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 element-icon {
@@ -67,6 +66,6 @@ element-icon {
 
 element-text {
     vertical-align:   0.5;
-    color:            rgb(225, 215, 215);
+    color:            rgba(255, 255, 255,0.8);
 }
 
