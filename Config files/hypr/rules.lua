@@ -48,7 +48,9 @@ hl.window_rule({
 
 hl.layer_rule({ match = { namespace = "rofi" }, blur = true })
 hl.layer_rule({ match = { namespace = "rofi" }, dim_around = true })
-hl.layer_rule({match = { namespace = "rofi" },animation = "slide"})
+hl.layer_rule({match = { namespace = "rofi" }, animation = "slide"})
+hl.layer_rule({match = { namespace = "hyprpicker"}, no_anim = true })
+hl.layer_rule({match = { namespace = "selection"}, no_anim = true })
 
 --Gamemode
 hl.bind("SUPER + G", function ()

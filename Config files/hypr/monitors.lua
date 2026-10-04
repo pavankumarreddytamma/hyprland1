@@ -8,7 +8,7 @@ hl.monitor({
     mode     = "preferred",
     position = "0x0",
     scale    = "1",
-    disabled = false
+    disabled = true
 })
 
 hl.monitor({
