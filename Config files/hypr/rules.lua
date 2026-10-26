@@ -46,8 +46,28 @@ hl.window_rule({
     float = true,
 })
 
+hl.window_rule({
+	name = "floating-calculator",
+	match = { class = "org.gnome.Calculator" },
+	float = true,
+})
+
+hl.window_rule({
+	name = "floating-volume",
+	match = { class = "org.pulseaudio.pavucontrol" },
+	float = true,
+	size = "800 600"
+})
+
+hl.window_rule({
+	name = "floating-bluetooth",
+	match = { class = "blueman-manager" },
+	float = true,
+	size = "800 600"
+})
+
 hl.layer_rule({ match = { namespace = "rofi" }, blur = true })
-hl.layer_rule({ match = { namespace = "waybar" }, blur = true })
+hl.layer_rule({ match = { namespace = "waybar" }, blur = false })
 hl.layer_rule({ match = { namespace = "rofi" }, dim_around = true })
 hl.layer_rule({match = { namespace = "rofi" }, animation = "slide"})
 hl.layer_rule({match = { namespace = "hyprpicker"}, no_anim = true })

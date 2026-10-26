@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.5);
+    background: #1A1C29;
 }
 
 #workspaces {
@@ -15,8 +15,7 @@ window#waybar {
 }
 
 #workspaces button {
-    color: rgb(255, 255, 255);
-    border-bottom: 2px solid transparent;
+    color: #916372;
     min-height: 0;
     margin: 0px 12px 0px 0px;
     padding: 0px;
@@ -24,20 +23,18 @@ window#waybar {
 
 #workspaces button.urgent {
     color: red;
-    border-bottom: 2px solid red;
 }
 
 #workspaces button.active {
-	color: rgb(255, 255, 255);
-    border-bottom: 2px solid white;
+    color: #e4e1ff;
 }
 
 #clock {
-    color: rgb(255, 255, 255);
+    color: #e4e1ff;
 }
 
 #battery {
-    color: rgb(255, 255, 255);
+    color: #e4e1ff;
     margin-right: 16px;
 }
 
@@ -46,21 +43,20 @@ window#waybar {
 }
 
 #battery.warning {
-    color: rgb(126, 205, 78);
+    color: #1A1C29;
 }
 
 #network {
-    color: rgb(255, 255, 255);
+    color: #e4e1ff;
     margin-right: 12px;
 }
 
 #pulseaudio {
-    color: rgb(255, 255, 255);
+    color: #e4e1ff;
     margin-right: 12px;
 }
 
 #backlight {
-    color: rgb(255, 255, 255);
+    color: #e4e1ff;
     margin-right: 12px;
 }
-

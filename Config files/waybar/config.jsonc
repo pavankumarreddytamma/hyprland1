@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["network", "pulseaudio", "backlight", "battery"],
@@ -13,21 +13,21 @@
         "format": "{icon}",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "format-charging": "󰂄",
-        "tooltip-format": "{capacity}%"
+        "tooltip-format": "Battery: {capacity}%\nHealth: {health}"
     },
 
     "clock": {
-        "format": "{:%d %b %A %I:%M %p}",
-        "tooltip": false
+        "format": "{:%d %B %A %I:%M %p}",
+	"tooltip-format": false
     },
 
     "network": {
         "interval": 5,
         "format-wifi": "{icon}",
-        "format-ethernet": "󰈀",
-        "format-linked": "󰈀",
-        "format-disconnected": "󰤭",
-        "format-disabled": "",
+        "format-ethernet": "{ifname}",
+        "format-linked": "linked",
+        "format-disconnected": "disconnected",
+        "format-disabled": "disabled",
         "format-icons": [
             "󰤯",
             "󰤟",
@@ -37,14 +37,14 @@
         ],
         //"on-click": "nmgui",
         "tooltip-format-wifi": "{essid}\nSignal: {signalStrength}%",
-        "tooltip-format-ethernet": "󰈀  {ifname}\nIP: {ipaddr}",
+        "tooltip-format-ethernet": "󰈀  {ifname}",
         "tooltip-format-disconnected": "Disconnected"
     },  
 
     "backlight": {
 	    "device": "intel_backlight",
 	    "format": "󰃠",
-        "tooltip": false
+	    "tooltip-format": "Brightness: {percent}%"
     },
 
 
@@ -66,6 +66,11 @@
 	    },
 	    "scroll-step": 1,
 	    //"on-click": "pavucontrol",
-        "tooltip": false
+        "tooltip-format": "Volume: {volume}%"
+    },
+
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e+1\" }))'",
+        "on-scroll-down": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e-1\" }))'"
     }
 }

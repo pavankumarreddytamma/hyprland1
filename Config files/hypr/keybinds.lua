@@ -25,14 +25,17 @@ hl.bind(mainMod .. " + SHIFT + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + V", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind("SUPER + SHIFT + Left", hl.dsp.window.move({ direction = "left"}))
+hl.bind("SUPER + SHIFT + Up", hl.dsp.window.move({ direction = "up"}))
+hl.bind("SUPER + SHIFT + Down", hl.dsp.window.move({ direction = "down"}))
 hl.bind("SUPER + SHIFT + Right", hl.dsp.window.move({ direction = "right"}))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(broswer))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("/home/pavan/Scripts/awww.sh"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("HYPRSHOT_DIR=/home/pavan/screenshots hyprshot --freeze -zm region"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("HYPRSHOT_DIR=/home/pavan/screenshots hyprshot --freeze -zm region"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("brave"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("pavucontrol"))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("blueman-manager"))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("gnome-calculator"))
 
 
 -- Move focus with mainMod + arrow keys
@@ -50,8 +53,8 @@ for i = 1, 10 do
 end
 
 -- Example special workspace (scratchpad)
-hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(mainMod .. " + GRAVE",         hl.dsp.workspace.toggle_special("magic"))
+hl.bind(mainMod .. " + SHIFT + GRAVE", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
