@@ -5,14 +5,14 @@
 
 hl.config({
     general = {
-        gaps_in  = 8,
-        gaps_out = 16,
+        gaps_in  = 2,
+        gaps_out = 4,
 
-        border_size = 0,
+        border_size = 1,
 
         col = {
-            active_border   =  "rgb(3b3b3b)",
-	    inactive_border   =  "rgb(3b3b3b)"
+            active_border   =  "rgb(d67b7b)",
+	    inactive_border   =  "rgb(d67b7b)"
 
         },
 
@@ -26,8 +26,8 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 11,
-        rounding_power = 11,
+        rounding       = 0,
+        rounding_power = 1,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
@@ -40,8 +40,8 @@ hl.config({
         },
 
         blur = {
-            enabled   = true,
-            size      = 14,
+            enabled   = false,
+            size      = 10,
             passes    = 2,
             new_optimizations = true,
         },
@@ -50,11 +50,18 @@ hl.config({
             enabled = false,
             samples = 20,
         },
+
+	wobble = {
+		enabled = false,
+		stiffness = 200,
+		damping = 1,
+		mesh = 12
+	}
     },
 
     animations = {
         enabled = true,
-    },
+    },   
 })
 
 
@@ -66,28 +73,28 @@ hl.curve("animation5", {type = "bezier", points = {{0.25, 0.70}, {0.15, 1.00},}}
 hl.curve("animation6", {type = "bezier", points = {{0.33, 0.00}, {0.67, 1.00},}})
 hl.curve("animation6", {type = "bezier", points = {{0.10, 0.90}, {0.25, 1.00},}})
 
-
-hl.animation({ leaf = "global",        enabled = true,  speed = 5, bezier = "animation4" })
-hl.animation({ leaf = "border",        enabled = true,  speed = 5, bezier = "animation4" })
-hl.animation({ leaf = "windows",       enabled = true,  speed = 5, bezier = "animation4"})
-hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 5, bezier = "animation4", style = "gnomed"})
-hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 5, bezier = "animation4", style = "gnomed"})
-hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 5, bezier = "animation4" })
-hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 5, bezier = "animation4" })
-hl.animation({ leaf = "fade",          enabled = true,  speed = 5, bezier = "animation4" })
-hl.animation({ leaf = "layers",        enabled = true,  speed = 5, bezier = "animation4" })
-hl.animation({ leaf = "layersIn",      enabled = true,  speed = 5, bezier = "animation4", style = "popin" })
-hl.animation({ leaf = "layersOut",     enabled = true,  speed = 5, bezier = "animation4", style = "popin" })
-hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 5, bezier = "animation4" })
-hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 5, bezier = "animation4" })
-hl.animation({ leaf = "workspaces",    enabled = true,  speed = 5, bezier = "animation4", style = "slide" })
-hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 5, bezier = "animation4", style = "slide" })
-hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 5, bezier = "animation4", style = "slide" })
-hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 5, bezier = "animation4" })
+hl.animation({ leaf = "global",        enabled = true,  speed = 2, bezier = "animation4" })
+hl.animation({ leaf = "border",        enabled = true,  speed = 2, bezier = "animation4" })
+hl.animation({ leaf = "windows",       enabled = true,  speed = 2, bezier = "animation4"})
+hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 2, bezier = "animation4", style = "slide"})
+hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 2, bezier = "animation4", style = "slide"})
+hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 2, bezier = "animation4" })
+hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 2, bezier = "animation4" })
+hl.animation({ leaf = "fade",          enabled = true,  speed = 2, bezier = "animation4" })
+hl.animation({ leaf = "layers",        enabled = true,  speed = 2, bezier = "animation4" })
+hl.animation({ leaf = "layersIn",      enabled = true,  speed = 2, bezier = "animation4", style = "slide" })
+hl.animation({ leaf = "layersOut",     enabled = true,  speed = 2, bezier = "animation4", style = "slide" })
+hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 2, bezier = "animation4" })
+hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 2, bezier = "animation4" })
+hl.animation({ leaf = "workspaces",    enabled = true,  speed = 2, bezier = "animation4", style = "slide" })
+hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 2, bezier = "animation4", style = "slide" })
+hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 2, bezier = "animation4", style = "slide" })
+hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 2, bezier = "animation4" })
 
 hl.config({
     dwindle = {
         preserve_split = true, -- You probably want this
+	precise_mouse_move = true
     },
 })
 

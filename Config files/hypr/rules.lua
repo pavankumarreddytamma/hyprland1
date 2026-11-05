@@ -66,38 +66,43 @@ hl.window_rule({
 	size = "800 600"
 })
 
-hl.layer_rule({ match = { namespace = "rofi" }, blur = true })
+hl.layer_rule({ match = { namespace = "rofi" }, blur = false })
 hl.layer_rule({ match = { namespace = "waybar" }, blur = false })
-hl.layer_rule({ match = { namespace = "rofi" }, dim_around = true })
+hl.layer_rule({ match = { namespace = "rofi" }, dim_around = false })
 hl.layer_rule({match = { namespace = "rofi" }, animation = "slide"})
 hl.layer_rule({match = { namespace = "hyprpicker"}, no_anim = true })
 hl.layer_rule({match = { namespace = "selection"}, no_anim = true })
 
---Gamemode
+--Powermode
 hl.bind("SUPER + G", function ()
-    local game_mode = (hl.get_config("animations.enabled") == false)
+    local Power_mode = (hl.get_config("animations.enabled") == false)
 
-    if game_mode then
+    if Power_mode then
         hl.exec_cmd("hyprctl reload")
         return
     end
     
     hl.config({
-        general = {
-            gaps_in = 0, gaps_out = 0, -- Disable gaps  
-            border_size = 0,
-        },
+     --   general = {
+     --       gaps_in = 0, gaps_out = 0, -- Disable gaps  
+   --         border_size = 0,
+ --       },
 
         animations = {
             enabled = false, -- Disable animations
         },
         
-        -- Disable blur, shadow and window rounding
         decoration = {
             shadow = { enabled = false },
             blur = { enabled = false },
             rounding = 0,
-        }
+        },
+
+	debug = {
+		vfr = true
+	},
+
+	--hl.env("AQ_DRM_DEVICES", "/dev/dri/card1:/dev/dri/card0")
     })
 
 end)
@@ -112,3 +117,16 @@ hl.workspace_rule({ workspace = "7", monitor = "eDP-1" })
 hl.workspace_rule({ workspace = "8", monitor = "eDP-1" })
 hl.workspace_rule({ workspace = "9", monitor = "eDP-1" })
 hl.workspace_rule({ workspace = "10", monitor = "eDP-1" })
+
+--Laptop monitor on and off
+local monitorEnabled = true
+
+hl.bind("SUPER + M", function()
+    if monitorEnabled then
+        hl.monitor({ output = "eDP-1", disabled = true })
+        monitorEnabled = false
+    else
+        hl.monitor({ output = "eDP-1", disabled = false })
+        monitorEnabled = true
+    end
+end)

@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-    background: #1A1C29;
+    background: #1A1A1C;
 }
 
 #workspaces {
@@ -26,15 +26,15 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: #e4e1ff;
+    color: #d67b7b;
 }
 
 #clock {
-    color: #e4e1ff;
+    color: #d67b7b;
 }
 
 #battery {
-    color: #e4e1ff;
+    color: #d67b7b;
     margin-right: 16px;
 }
 
@@ -47,16 +47,16 @@ window#waybar {
 }
 
 #network {
-    color: #e4e1ff;
+    color: #d67b7b;
     margin-right: 12px;
 }
 
 #pulseaudio {
-    color: #e4e1ff;
+    color: #d67b7b;
     margin-right: 12px;
 }
 
 #backlight {
-    color: #e4e1ff;
+    color: #d67b7b;
     margin-right: 12px;
 }

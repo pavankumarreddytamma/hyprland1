@@ -1,6 +1,6 @@
 configuration {
     modi: "drun";
-    show-icons: true;
+    show-icons: false;
     display-drun: "";
     drun-display-format: "{name}";
     show-match: false;
@@ -11,6 +11,8 @@ configuration {
 
 * {
     background-color: transparent;
+    text: #d67b7b;
+    bg: #1a1a1c;
 }
 
 window {
@@ -19,31 +21,31 @@ window {
 
 mainbox {
     children:         [ inputbar, listview ];
-    background-color: #001419;
-    border: 2px;
-    border-color: rgba(255, 255, 255, 0.1);
-    border-radius: 11px;
+    background-color: @bg;
+    border: 1px;
+    border-color: @text;
+    //border-radius: 11px;
 }
 
 inputbar {
     margin:           16px 16px 16px 16px;
     padding:          12px 12px 12px 12px;
-    background-color: #00313D;
-    border-radius:    12px;
+    background-color: #4e0a0a;
+    //border-radius:    12px;
     children:         [ prompt,entry ];
-    border: 2px;
-    border-color: rgba(255, 255, 255, 0.1);
+    border: 1px;
+    border-color: @text;
 }
 
 prompt {
-    text-color:       #e4e1ff;
+    text-color:       @text;
     padding:          0px 12px 0px 5px;
 }
 
 entry {
-    text-color:       #e4e1ff;
+    text-color:       @text;
     placeholder:      "Search Apps...";
-    placeholder-color: rgba(255, 255, 255, 0.4);
+    placeholder-color: @text;
 }
 
 listview {
@@ -54,12 +56,14 @@ listview {
 }
 
 element {
-    padding:          8px 12px 8px 12px;
-    border-radius:    10px;
+    padding:          10px 12px 10px 12px;
+    //border-radius:    10px;
 }
 
 element selected {
-    background-color: #0F3C46;
+    background-color: #4e0a0a;
+    border: 1px;
+    border-color: @text;
 }
 
 element-icon {
@@ -69,5 +73,5 @@ element-icon {
 
 element-text {
     vertical-align:   0.5;
-    color:            #e4e1ff;
+    color:            @text;
 }
