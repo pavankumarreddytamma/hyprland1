@@ -11,12 +11,13 @@ hl.config({
 	bell_sound = "none"
     },
     debug = {
-        vfr = false,
+        vfr = true,
         overlay = false
     },
 
     render = {
-        direct_scanout = 0,
+        direct_scanout = 2,
+	new_render_scheduling = true,
         async_commit = true
     },
 
@@ -31,5 +32,9 @@ hl.config({
 
     ecosystem = {
         no_donation_nag = true
+    },
+
+    xwayland = {
+	    enabled = true
     }
 })

@@ -18,7 +18,7 @@
 
     "clock": {
         "format": "{:%d %B %A %I:%M %p}",
-	"tooltip-format": false
+	"tooltip": false
     },
 
     "network": {
@@ -70,7 +70,7 @@
     },
 
     "hyprland/workspaces": {
-        "on-scroll-up": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e+1\" }))'",
-        "on-scroll-down": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e-1\" }))'"	
+        "tooltip": false,
+	"on-click": "activate"
     }
 }

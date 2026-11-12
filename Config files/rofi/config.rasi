@@ -1,6 +1,6 @@
 configuration {
     modi: "drun";
-    show-icons: false;
+    show-icons: true;
     display-drun: "";
     drun-display-format: "{name}";
     show-match: false;
@@ -11,8 +11,9 @@ configuration {
 
 * {
     background-color: transparent;
-    text: #d67b7b;
-    bg: #1a1a1c;
+    text: #8CA4C6;
+    bg: #1b1d2a;
+    hg: #292c40;
 }
 
 window {
@@ -22,19 +23,21 @@ window {
 mainbox {
     children:         [ inputbar, listview ];
     background-color: @bg;
-    border: 1px;
+    border: 2px;
     border-color: @text;
+    border-radius: 11px;
     //border-radius: 11px;
 }
 
 inputbar {
     margin:           16px 16px 16px 16px;
     padding:          12px 12px 12px 12px;
-    background-color: #4e0a0a;
+    background-color: @hg;
     //border-radius:    12px;
     children:         [ prompt,entry ];
-    border: 1px;
+    border: 2px;
     border-color: @text;
+    border-radius: 11px;
 }
 
 prompt {
@@ -51,7 +54,7 @@ entry {
 listview {
     lines:            6;
     columns:          1;
-    fixed-height:     false;
+    fixed-height:     true;
     margin:           0px 16px 16px 16px;
 }
 
@@ -61,9 +64,10 @@ element {
 }
 
 element selected {
-    background-color: #4e0a0a;
-    border: 1px;
-    border-color: @text;
+    background-color: @hg;
+    border: 2px;
+    border-radius: 11px;
+    border-color: transparent;
 }
 
 element-icon {

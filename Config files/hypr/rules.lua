@@ -73,40 +73,6 @@ hl.layer_rule({match = { namespace = "rofi" }, animation = "slide"})
 hl.layer_rule({match = { namespace = "hyprpicker"}, no_anim = true })
 hl.layer_rule({match = { namespace = "selection"}, no_anim = true })
 
---Powermode
-hl.bind("SUPER + G", function ()
-    local Power_mode = (hl.get_config("animations.enabled") == false)
-
-    if Power_mode then
-        hl.exec_cmd("hyprctl reload")
-        return
-    end
-    
-    hl.config({
-     --   general = {
-     --       gaps_in = 0, gaps_out = 0, -- Disable gaps  
-   --         border_size = 0,
- --       },
-
-        animations = {
-            enabled = false, -- Disable animations
-        },
-        
-        decoration = {
-            shadow = { enabled = false },
-            blur = { enabled = false },
-            rounding = 0,
-        },
-
-	debug = {
-		vfr = true
-	},
-
-	--hl.env("AQ_DRM_DEVICES", "/dev/dri/card1:/dev/dri/card0")
-    })
-
-end)
-
 hl.workspace_rule({ workspace = "1", monitor = "HDMI-A-2" }) 
 hl.workspace_rule({ workspace = "2", monitor = "HDMI-A-2" })
 hl.workspace_rule({ workspace = "3", monitor = "HDMI-A-2" })
@@ -129,4 +95,34 @@ hl.bind("SUPER + M", function()
         hl.monitor({ output = "eDP-1", disabled = false })
         monitorEnabled = true
     end
+end)
+
+--Powermode
+hl.bind("SUPER + G", function ()
+    local Power_mode = (hl.get_config("animations.enabled") == false)
+
+    if Power_mode then
+        hl.exec_cmd("hyprctl reload")
+        return
+    end
+
+    hl.config({
+        general = {
+            gaps_in = 0, gaps_out = 0, -- Disable gaps
+            border_size = 0,
+        },
+
+        animations = {
+            enabled = false, -- Disable animations
+        },
+
+        decoration = {
+            shadow = { enabled = false },
+            blur = { enabled = false },
+            rounding = 0   
+        },
+
+	--hl.env("AQ_DRM_DEVICES", "/dev/dri/card1:/dev/dri/card0")
+    })
+
 end)
